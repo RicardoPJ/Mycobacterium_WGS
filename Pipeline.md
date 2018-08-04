@@ -97,9 +97,17 @@ Descargamos el genoma de referencia de Mycobacterium que deseamos comparar en es
 
   En terminal nos colocamos dentro de la carpeta de CONTGuator
   $ pwd
-  $ python CONTIGuator.py -r ../Curso_TB_Epimol/GenomaRef/GCF_000195835.2_ASM19583v2_genomic.fna -c  ../Curso_TB_Epimol/Ensamble_15_4493/ensamble15_4493_.contigs.fasta
+  $ python CONTIGuator.py -r ../Curso_TB_Epimol/GenomaRef/GCF_000195835.2_ASM19583v2_genomic.fna -c  ../Curso_TB_Epimol/Ensamble_15_4493/ensamble15_4493_.contigs.
 
-  
+  O se puede usar la version web del ordenador
+
+  http://combo.dbe.unifi.it/contiguator
+
+
+  #### Anotación  
+
+
+
 
 
 
