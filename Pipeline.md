@@ -22,10 +22,15 @@ Instalación
 El programa A5 Produce ensamblajes de genoma microbiano de alta calidad en una computadora portátil sin ningún ajuste de parámetros.
 A5 es un programa que automatiza todos los pasos para generar conjuntos de genoma bacteriano a partir de datos brutos de Illumina.
 Consiste en cinco pasos:
+
 (1) leer la limpieza;
+
 (2) ensamble de cóntigo;
+
 (3) andamio crudo;
+
 (4) corrección de ensamblaje incorrecto;
+
 (5) andamiaje final.
 
 Una vez instalado el programa,  descargamos los archivos con los que  trabajaremos
@@ -104,7 +109,41 @@ Descargamos el genoma de referencia de Mycobacterium que deseamos comparar en es
   http://combo.dbe.unifi.it/contiguator
 
 
-  #### Anotación  
+  Podemos observar los resultados del ordenamiento en este link
+
+  https://www.dropbox.com/sh/8izjwke83tuwn2y/AABcZcxJTyVMovej0sGcpVM5a?dl=0
+
+
+  #### Anotación
+
+  ingresamos a Rast
+
+  http://rast.nmpdr.org/
+
+  Y Creamos una cuenta
+
+
+
+
+
+
+
+
+  ### Tarea
+
+  Realizar el mismo procedimiento  para
+secuencia  1
+ https://www.dropbox.com/s/pwfg0vhn72efnqo/15-4494_S2_L001_R1_001.fastq.gz?dl=0
+ https://www.dropbox.com/s/z6xdmqqciar6yfg/15-4494_S2_L001_R2_001.fastq.gz?dl=0
+
+Secuencia 2
+
+https://www.dropbox.com/s/2m8pkpiqtw0yejq/15-4495_S4_L001_R1_001.fastq.gz?dl=0
+https://www.dropbox.com/s/91yijg90ucfpv0c/15-4495_S4_L001_R2_001.fastq.gz?dl=0
+
+
+
+
 
 
 
