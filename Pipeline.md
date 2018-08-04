@@ -68,10 +68,16 @@ En terminal colocamos
 
 La logica de este comando es :
    perl = al lenguaje en el que esta codificado el script  " a5a5_pipeline"
+
   ./a5a5_pipeline =  ". " indica que el archivo esta en la misma carpta donde estamos ubicados en terminal,
+
   /Curso_TB_Epimol/secuencias/15-4493_S1_L001_R1_001.fastq = input_Forward
+
   /Curso_TB_Epimol/secuencias/15-4493_S1_L001_R1_001.fastq = input_Reverse
+
   Ensamble_15_4493_ = Nombre que llevaran todos los archivos temporales y de salida  (output)
+
+
   --threads 2  = Numero de trabajos que permitiremos que corran simultaneamente en nuestro procesador, esto permite que este programa se pueda correr en equipos portatiles sin dificultad.
 
 Al termino de 1 hora proximadamente terminara el proceso generando una carpeta con el nombre que nosotros le especificamos.
