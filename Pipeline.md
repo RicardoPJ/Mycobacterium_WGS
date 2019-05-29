@@ -12,7 +12,7 @@ Dentro de esta carpeta ireamos creando nuevas carpetas conforme se necesite, y d
 
 Al recibir la secuencia primero debemos valorar su calidad. Para esto utilizaremos el programa Fastqc.
 
-URl:  lik del programa
+URl:  https://github.com/s-andrews/FastQC
 
 ## Uso de A5- miseq
 
@@ -155,7 +155,7 @@ https://www.dropbox.com/s/91yijg90ucfpv0c/15-4495_S4_L001_R2_001.fastq.gz?dl=0
 
 
 
-El Link para la presentación esta en el archivo README
+El Link para la presentación https://www.dropbox.com/s/f58d9s8ivcldx45/Secuenciaci%C3%B3n.pptx?dl=0
 
 
 
