@@ -155,7 +155,7 @@ https://www.dropbox.com/s/91yijg90ucfpv0c/15-4495_S4_L001_R2_001.fastq.gz?dl=0
 
 
 
-
+El Link para la presentación esta en el archivo README
 
 
 
