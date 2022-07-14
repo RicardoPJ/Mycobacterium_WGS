@@ -4,9 +4,26 @@ Para realizar el analisis de secuencias de Mycobacterium Tuberculosis. vamos a r
 
 Seguiremos esta diagrama de flujo.
 
-<img src="/Users/Ricardo/Documents/GitHub/Mycobacterium_WGS/imagen" alt="">
 
-Primero Creamos una carpeta llamada "Curso_TB_Epimol"
+
+Primero  verificamos la instalación correcta de Docker en nuestro equipo.
+
+docker run --name conda-ubuntu_WGS -d  -v TU_CARPETA_EN_WINDOWS:/home/CARPETA_QUE_DESEAS_EN_LINUX/  continuumio/miniconda3  tail -f /dev/null 
+
+
+docker exec -it conda-ubuntu_WGS   /bin/bash
+
+
+Procedemos a instalar y actualizar Anaconda y bioconda.
+
+conda config --add channels defaults
+conda config --add channels bioconda
+conda config --add channels conda-forge
+
+Despues nos ubicamos en nuestra carpeta "wgs"  
+
+Creamos una carpeta llamada "Curso_TB_Delfin"
+
 Dentro de esta carpeta ireamos creando nuevas carpetas conforme se necesite, y descargando los archivos que se vayan indicando.
 
 
@@ -14,10 +31,16 @@ Al recibir la secuencia primero debemos valorar su calidad. Para esto utilizarem
 
 URl:  https://github.com/s-andrews/FastQC
 
+Este software se pude instalar  y correr desde windows, solo se requiere tener una version de java instalada.
+
+
+# Ensamble
+
 ## Uso de A5- miseq
 
 Instalación
- https://sourceforge.net/projects/ngopt/
+ 
+ conda install -c bioconda a5-miseq
 
 El programa A5 Produce ensamblajes de genoma microbiano de alta calidad en una computadora portátil sin ningún ajuste de parámetros.
 A5 es un programa que automatiza todos los pasos para generar conjuntos de genoma bacteriano a partir de datos brutos de Illumina.
@@ -35,7 +58,7 @@ Consiste en cinco pasos:
 
 Una vez instalado el programa,  descargamos los archivos con los que  trabajaremos
 
-raw : ( Lectura en Crudo)
+raw : 
 
 Para utilizar A5
 
@@ -43,15 +66,13 @@ Debemos colocarlos dentro de la carpeta del programa desde la terminal.
 utilizando el comando "cd" nos colocamos en a5_miseq_macOS_20160825/bin
 
 Utilizaremos esta secuencia para practicar el ensamble
-https://www.dropbox.com/sh/tguxee5m6mewv2s/AACwiID1NYOQy9GarGjlaxbca?dl=0
 
-Descargamos 15-4493_S1_L001_R1_001.fastq y 15-4493_S1_L001_R2_001.fastq
 
 Los ubicamos dentro de nuestra carpeta de trabajo /Curso_TB_Epimol/secuencias
 
 en terminial  indicamos el siguente comando para descomprimir los archivos de secuencias.
-  $ tar -zxvf 15-4493_S1_L001_R1_001.fastq.gz
-  $ tar -zxvf 15-4493_S1_L001_R2_001.fastq.gz
+  $ gunz -d 15-4493_S1_L001_R1_001.fastq.gz
+  $ gunz -d  15-4493_S1_L001_R2_001.fastq.gz
   $ ls
   $ pwd
 
@@ -64,7 +85,7 @@ nos movemos a la carpeta con el programa el archvo " a5_pipeline.pl" dentro de l
 
 En terminal colocamos
 
-    $ perl ./a5_pipeline.pl /Curso_TB_Epimol/secuencias/15-4493_S1_L001_R1_001.fastq /Curso_TB_Epimol/secuencias/15-4493_S1_L001_R2_001.fastq Ensamble_15_4493_ --threads 2
+    $a5_pipeline.pl /Curso_TB_Epimol/secuencias/15-4493_S1_L001_R1_001.fastq /Curso_TB_Epimol/secuencias/15-4493_S1_L001_R2_001.fastq Ensamble_15_4493_ --threads 2
 
 La logica de este comando es :
    perl = al lenguaje en el que esta codificado el script  " a5a5_pipeline"
@@ -83,11 +104,14 @@ La logica de este comando es :
 Al termino de 1 hora proximadamente terminara el proceso generando una carpeta con el nombre que nosotros le especificamos.
 El resultado de nuestro ensamble estara en el archivo:
 
-##### ensamble15_4493_.contigs.fasta
 
-Podemos ver los resultados en es te link
-https://www.dropbox.com/sh/cvf1dnfa9txzjq1/AAC7V8t8WcrqHUUv3tEjjfuaa?dl=0
 
+
+
+evaluar ENSAMBLE
+
+QUAST evaluates genome assemblies.
+conda install -c bioconda quast
 
 
 ### Ordenamiendo
